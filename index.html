@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body
+    style="
+      background-image: url(https://plus.unsplash.com/premium_photo-1671493286983-801d06993213?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+      background-size: cover;"
+    class="flex justify-center items-center h-screen"
+  >
+    <div
+      class="bg-white border px-10 py-8 border-4 border-pink-300 shadow-lg shadow-pink-500 rounded-xl text-center animate__animated animate__backInDown m-8 w-80"
+      id="card"
+    >
+      <h1 class="text-3xl">Happy Birthday!!</h1>
+      <h1
+        class="text-4xl text-center text-pink-500 font-bold animate__animated animate__pulse animate__infinite"
+      >
+        Nazwa
+      </h1>
+      <button
+        class="p-2 bg-pink-500 text-white rounded mt-5 hover:bg-pink-800 transition ease-in w-full animate__animated animate__delay-1s animate__tada"
+        onclick="ubahKartu()"
+      >
+        Click Here!
+      </button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+    <script>
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+      });
+
+      let card = document.getElementById("card");
+      function ubahKartu() {
+        card.innerHTML = `<h1 class="font-semibold text-wrap animate__animated animate__zoomIn">Happy Sweet Seventeen, Nazwa! 🎉<br>
+
+        Welcome to your sweet seventeen, the age where dreams feel closer and the future starts to open wide 🌟
+            
+        Di usia yang spesial ini, aku harap kamu selalu dikelilingi oleh orang-orang yang tulus, hari-hari yang indah, dan langkah yang penuh semangat.
+        You’re growing into such an amazing person, and I’m so proud of everything you are and everything you’re becoming ❤️
+            
+        Never stop being kind, never stop dreaming.
+        Semoga semua impianmu satu per satu menjadi nyata, dan semoga aku bisa terus berada di sisimu, menyaksikan kamu bersinar ✨
+            
+        Once again, happy birthday, Nazwa.
+        Selamat ulang tahun yang ke-17, Nazwa 💐</h1>
+        
+        <h2 class="mmt-3 animate__animated animate__fadeIn">- From : someone who Love u -</h2>
+        <button
+        class="p-2 bg-pink-500 text-white rounded mt-5 hover:bg-pink-800 transition ease-in w-full animate__animated animate__delay-1s animate__tada"
+        onclick="refresh()"
+      >
+        Tutup
+      </button>`;
+
+    }
+    function refresh() {
+        location.reload();
+    }
+    </script>
+  </body>
+</html>
